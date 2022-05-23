@@ -31,6 +31,7 @@ import { HiOutlineRefresh } from "react-icons/hi";
 import { TiTick } from "react-icons/ti";
 import { GiLouvrePyramid } from "react-icons/gi";
 import { GrLocation } from "react-icons/gr";
+
 import avatar from "./avatar.jpg";
 import avatar2 from "./avatar2.jpg";
 import avatar3 from "./avatar3.png";
@@ -42,7 +43,6 @@ import product4 from "./product4.jpg";
 import product5 from "./product5.jpg";
 import product6 from "./product6.jpg";
 import product7 from "./product7.jpg";
-import product8 from "./product8.jpg";
 
 export const gridOrderImage = (props) => (
   <div>
@@ -2911,6 +2911,7 @@ export const lineChartData = [
     { x: new Date(2011, 0, 1), y: 100 },
   ],
 ];
+
 export const dropdownData = [
   {
     Id: "1",
@@ -2925,6 +2926,7 @@ export const dropdownData = [
     Time: "May 2021",
   },
 ];
+
 export const SparklineAreaData = [
   { x: 1, yval: 2 },
   { x: 2, yval: 6 },
@@ -5708,6 +5710,7 @@ export const financialChartData = [
     volume: 27939544,
   },
 ];
+
 export const PyramidData = [
   { x: "Sweet Treats", y: 120, text: "120 cal" },
   { x: "Milk, Youghnut, Cheese", y: 435, text: "435 cal" },
