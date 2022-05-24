@@ -3005,22 +3005,22 @@ export const ecomPieChartData = [
 
 export const stackedChartData = [
   [
-    { x: "Jan", y: 111.1 },
-    { x: "Feb", y: 127.3 },
-    { x: "Mar", y: 143.4 },
-    { x: "Apr", y: 159.9 },
-    { x: "May", y: 159.9 },
-    { x: "Jun", y: 159.9 },
-    { x: "July", y: 159.9 },
+    { x: "Jan", y: 192.2 },
+    { x: "Feb", y: 234.6 },
+    { x: "Mar", y: 256.8 },
+    { x: "Apr", y: 191.5 },
+    { x: "May", y: 191.5 },
+    { x: "Jun", y: 191.5 },
+    { x: "July", y: 191.5 },
   ],
   [
-    { x: "Jan", y: 111.1 },
-    { x: "Feb", y: 127.3 },
-    { x: "Mar", y: 143.4 },
-    { x: "Apr", y: 159.9 },
-    { x: "May", y: 159.9 },
-    { x: "Jun", y: 159.9 },
-    { x: "July", y: 159.9 },
+    { x: "Jan", y: 81.1 },
+    { x: "Feb", y: 97.3 },
+    { x: "Mar", y: 113.4 },
+    { x: "Apr", y: 129.9 },
+    { x: "May", y: 129.9 },
+    { x: "Jun", y: 129.9 },
+    { x: "July", y: 129.9 },
   ],
 ];
 
