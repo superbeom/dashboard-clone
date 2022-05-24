@@ -2,8 +2,10 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-
 import "./App.css";
+
+import { useStateContext } from "./context/StateContext";
+
 import {
   Ecommerce,
   Orders,
@@ -25,7 +27,7 @@ import {
 import { ThemeSettings, Navbar, Sidebar, Footer } from "./components";
 
 const App = () => {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
 
   return (
     <div>
