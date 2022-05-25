@@ -20,7 +20,7 @@ export const StateProvider = ({ children }) => {
   const [currentTheme, setCurrentTheme] = useState(
     localStorage.getItem("theme")
   );
-  const [themeSettings, setThemeSettings] = useState(false);
+  const [showThemeSettings, setShowThemeSettings] = useState(false);
 
   const setColor = (color) => {
     setCurrentColor(color);
@@ -51,8 +51,8 @@ export const StateProvider = ({ children }) => {
         setScreenSize,
         currentColor,
         currentTheme,
-        themeSettings,
-        setThemeSettings,
+        showThemeSettings,
+        setShowThemeSettings,
         setColor,
         setTheme,
         handleClick,

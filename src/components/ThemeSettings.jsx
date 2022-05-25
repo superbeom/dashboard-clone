@@ -8,11 +8,16 @@ import { useStateContext } from "../context/StateContext";
 import { themeColors } from "../data/dummy";
 
 const ThemeSettings = () => {
-  const { currentColor, currentTheme, setColor, setTheme, setThemeSettings } =
-    useStateContext();
+  const {
+    currentColor,
+    currentTheme,
+    setColor,
+    setTheme,
+    setShowThemeSettings,
+  } = useStateContext();
 
   const onCloseThemeSettings = () => {
-    setThemeSettings(false);
+    setShowThemeSettings(false);
   };
 
   return (

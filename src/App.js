@@ -27,11 +27,16 @@ import {
 import { ThemeSettings, Navbar, Sidebar, Footer } from "./components";
 
 const App = () => {
-  const { activeMenu, currentColor, themeSettings, setThemeSettings } =
-    useStateContext();
+  const {
+    activeMenu,
+    currentColor,
+    currentTheme,
+    showThemeSettings,
+    setShowThemeSettings,
+  } = useStateContext();
 
   return (
-    <div>
+    <div className={currentTheme === "Dark" ? "dark" : ""}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: 1000 }}>
@@ -39,7 +44,7 @@ const App = () => {
               <button
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
                 style={{ backgroundColor: currentColor, borderRadius: "50%" }}
-                onClick={() => setThemeSettings(true)}
+                onClick={() => setShowThemeSettings(true)}
               >
                 <FiSettings />
               </button>
@@ -57,7 +62,7 @@ const App = () => {
           )}
 
           <div
-            className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${
+            className={`dark:bg-main-dark-bg bg-main-bg min-h-screen w-full ${
               activeMenu ? "md:ml-72" : "flex-2"
             }`}
           >
@@ -66,7 +71,7 @@ const App = () => {
             </div>
 
             <div>
-              {themeSettings && <ThemeSettings />}
+              {showThemeSettings && <ThemeSettings />}
 
               <Routes>
                 {/* Dashboard */}
