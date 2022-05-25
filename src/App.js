@@ -27,7 +27,8 @@ import {
 import { ThemeSettings, Navbar, Sidebar, Footer } from "./components";
 
 const App = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu, currentColor, themeSettings, setThemeSettings } =
+    useStateContext();
 
   return (
     <div>
@@ -37,7 +38,8 @@ const App = () => {
             <TooltipComponent content="Settings" position="TopCenter">
               <button
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
-                style={{ backgroundColor: "blue", borderRadius: "50%" }}
+                style={{ backgroundColor: currentColor, borderRadius: "50%" }}
+                onClick={() => setThemeSettings(true)}
               >
                 <FiSettings />
               </button>
@@ -64,6 +66,8 @@ const App = () => {
             </div>
 
             <div>
+              {themeSettings && <ThemeSettings />}
+
               <Routes>
                 {/* Dashboard */}
                 <Route path="/" element={<Ecommerce />} />

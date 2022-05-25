@@ -14,6 +14,26 @@ export const StateProvider = ({ children }) => {
   const [isClicked, setIsClicked] = useState(initialState);
   const [screenSize, setScreenSize] = useState(undefined);
 
+  const [currentColor, setCurrentColor] = useState(
+    localStorage.getItem("color")
+  );
+  const [currentTheme, setCurrentTheme] = useState(
+    localStorage.getItem("theme")
+  );
+  const [themeSettings, setThemeSettings] = useState(false);
+
+  const setColor = (color) => {
+    setCurrentColor(color);
+
+    localStorage.setItem("color", color);
+  };
+
+  const setTheme = (e) => {
+    setCurrentTheme(e.target.value);
+
+    localStorage.setItem("theme", e.target.value);
+  };
+
   const handleClick = (clicked) => {
     setIsClicked({
       ...initialState,
@@ -29,6 +49,12 @@ export const StateProvider = ({ children }) => {
         isClicked,
         screenSize,
         setScreenSize,
+        currentColor,
+        currentTheme,
+        themeSettings,
+        setThemeSettings,
+        setColor,
+        setTheme,
         handleClick,
       }}
     >

@@ -13,6 +13,8 @@ import {
 import { Stacked, Pie, Button, SparkLine } from "../components";
 
 const Ecommerce = () => {
+  const { currentColor } = useStateContext();
+
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
@@ -29,7 +31,7 @@ const Ecommerce = () => {
               text="Download"
               size="md"
               color="white"
-              bgColor="blue"
+              bgColor={currentColor}
               borderRadius="10px"
             />
           </div>
@@ -51,7 +53,10 @@ const Ecommerce = () => {
 
               <p className="mt-3">
                 <span className="text-lg font-semibold">{item.amount}</span>
-                <span className={`text-sm text-${item.pcColor} ml-2`}>
+                <span
+                  className={`text-sm ml-2`}
+                  style={{ color: item.pcColor }}
+                >
                   {item.percentage}
                 </span>
               </p>
@@ -109,8 +114,8 @@ const Ecommerce = () => {
                   type="Line"
                   width="250px"
                   height="80px"
-                  color="blue"
-                  currentColor="blue"
+                  color={currentColor}
+                  currentColor={currentColor}
                   data={SparklineAreaData}
                 />
               </div>
@@ -120,7 +125,7 @@ const Ecommerce = () => {
                   text="Download Report"
                   size="md"
                   color="white"
-                  bgColor="blue"
+                  bgColor={currentColor}
                   borderRadius="10px"
                 />
               </div>
