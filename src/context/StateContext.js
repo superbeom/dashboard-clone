@@ -15,10 +15,10 @@ export const StateProvider = ({ children }) => {
   const [screenSize, setScreenSize] = useState(undefined);
 
   const [currentColor, setCurrentColor] = useState(
-    localStorage.getItem("color")
+    localStorage.getItem("color") ?? "#03C9D7"
   );
   const [currentTheme, setCurrentTheme] = useState(
-    localStorage.getItem("theme")
+    localStorage.getItem("theme") ?? "Light"
   );
   const [showThemeSettings, setShowThemeSettings] = useState(false);
 
